@@ -1,0 +1,75 @@
+$color-links:#506690;
+$color-links-hover:#8854d0;
+$color-btn-2: rgba(136,84,208,.1);
+$color-btns-light-hover:#ede6f8;
+$color-btns-purple-hover:#7447b1;
+$color-gray: #506690;
+$color-darkblue-bg:#1b2a4e;
+$color-h6:#7c69ef;
+$color-number:#6c8aec;
+$color-bg-black:#161c2d;
+$color-dot-red:#df4759;
+$color-dot-yellow:#fad776;
+$color-dot-green:#42ba96;
+$color-border-bottom:#5f5f5f;
+@mixin tr-y{
+    transform: translateY(-5px) !important;
+    box-shadow: 1px 1px 8px #aaa !important;
+}
+@mixin menu-drop{
+    position: absolute !important;
+    background-color: #ffffff !important;
+    transition:0.3s!important;
+    border-radius: 8px !important;
+    width: 350px !important;
+    left: -170px !important;
+    padding:20px 40px !important;
+    top: 60px;
+    box-shadow: 2px 2px 8px #aaa !important; 
+    opacity: 0;
+    visibility: hidden;
+}
+@mixin purplebtn{
+    background-color: $color-links-hover !important;
+    transition: 0.3s !important;
+    padding: 10px 15px;
+    &:hover{
+        @include tr-y;
+        background-color: $color-btns-purple-hover !important;
+    }
+}
+@mixin lightbtn{
+    color: $color-links-hover !important;
+    background-color: $color-btn-2 !important;
+    transition: 0.3s !important;
+    padding: 10px 15px;
+    &:hover{
+        @include tr-y;
+        background-color: $color-btns-light-hover !important;
+    }   
+}
+.pad{
+    padding: 1.8% 5% !important;
+    @media(max-width:1200px){
+        padding: 2.7%  2% !important;
+    }
+}
+.visible{
+    top: 37px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.tr-hide{
+    @media (max-width:992px) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: translate(10px , -5px) !important;
+    }
+}
+.z-1000{
+    z-index: 1000 !important;
+}
+.tr{
+    transform: translateY(100px) !important;
+    opacity: 0;
+}
