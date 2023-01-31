@@ -1,6 +1,9 @@
 a {
   text-decoration: none !important;
 }
+body{
+  min-width: 330px !important;
+}
 nav {
   #btn-close {
     display: none;
@@ -233,6 +236,7 @@ main {
     }
     .auto-complete-text {
       .text-side {
+        width: 100% !important;
         background-color: $color-bg-black !important;
         height: 470px !important;
         box-shadow: 25px 60px 125px -25px rgb(80 102 144 / 10%),
@@ -260,6 +264,16 @@ main {
         .side-body {
           .write {
             color: #ffffff !important;
+            @media (max-width: 992px) {
+              font-size: 14px !important;
+              line-height: 20px !important;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px !important;
+            }
+            @media (max-width: 576px) {
+              font-size: 14px !important;
+            }
             code {
               color: green !important;
             }
